@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <div class="outer-container">
+<div class="slideshow-container">
+    
+    <div class="title">
+   <h1>Cal Poly Culture Fest</h1>
+    </div>
+    
+    <div class="project-topic">
+   <h1>Cal Poly Culture in Dance</h1>
+    </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 10</div>
+  <img src="pics/1.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | Students gathered at the UU plaza to celebrate Culturefest.</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 10</div>
+  <img src="pics/2.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | Cultural clubs and organizations lined their tents and booths on the UU plaza and lawn to sell food that represents their unique cultures.</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 10</div>
+  <img src="pics/3.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | A popular booth during Culturefest was TVSA’s(Thai Vietnamese Student Association) thai tea boba stall that ran out of boba.</div>
+</div>
+    <div class="mySlides fade">
+  <div class="numbertext">4 / 10</div>
+  <img src="pics/4.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | Apart from food, the stage was used to showcase dance performances from a variety of cultural organizations at Culturefest.</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 10</div>
+  <img src="pics/5.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | Ethan Franciliso, a third year computer engineering student, holds a freeze in front of the Slo Breakers during their performance. He said “Breaking (a.k.a. breakdance) represents hip hop culture in the way battles pays homage to the origin of hip hop in the Bronx, where breaking was a way to settle feuds between gangs.”</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 10</div>
+  <img src="pics/6.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | Hui O Hawaii members perform a hula dance.</div>
+</div><div class="mySlides fade">
+  <div class="numbertext">7 / 10</div>
+  <img src="pics/7.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | KDC (KASA Dance Crew) performs surrounded by the crowd during the final act of Culturefest.</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 10</div>
+  <img src="pics/8.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | PAC loading dock | Anna Kanazawa(using drum on left), a third year architecture student, leads the Lion Dance Team in a review after their performance.  She said “I decided to take leadership within this club because lion dancing is a wonderful opportunity for people of varying backgrounds to come together, train for a common goal, and perform to spread joy and happiness to others within our community, especially here in Slo where the Asian population is considered a minority and underrepresented.”</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">9 / 10</div>
+  <img src="pics/9.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | After the performances, students gathered at the center of the plaza to dance for the finale of Culturefest.</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">10 / 10</div>
+  <img src="pics/10.jpg" style="width:100%">
+  <div class="text">October 12, 2019 | UU Plaza | David Yang, a third year mechanical engineer, continues to dance with an ASI member after the dance crowd disperses at the end of Culturefest. Yang said the reason he dances is because “I can express myself and put the way I feel into movement.”</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+    </div> 
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
