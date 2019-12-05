@@ -1,0 +1,347 @@
+
+<!doctype html>
+
+<html>
+	
+<head>
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>Dance Beyond Borders | Home</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+    
+<!--link tags are for linking to external files, in this case a special javascript-->
+    
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!--The following lines display the favicon stuff-->
+    
+<link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/favicon-16x16.png">
+<link rel="manifest" href="img/Favicon/site.webmanifest">
+<link rel="mask-icon" href="img/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="theme-color" content="#ffffff">
+
+
+<!--The following code links to the jquery library -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Questrial|Righteous&display=swap" rel="stylesheet">
+	
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar dissapear on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>     
+    
+<!--Favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!--End Favicon-->
+    
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script>  
+    
+<script src="splash.js"></script>   
+    
+    
+</head>
+
+<body>
+
+<!--beginning of navigation section-->
+<header>
+    <div id="wrap">
+        
+<div class="nav-container">
+<div class="brand"><img src="img/test-logo.jpg" width="65" height="60" alt="DBB Logo"/></div>
+<div class="brand2"><img src="img/title.png" width="400.518" height="105" alt="Dance Beyond Border"/></div>
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a href="#home">Diversity at Cal Poly</a>
+        </li>
+	   <li>
+          <a href="#gal">Center Stage</a>
+		  </li>
+	  	<li>
+          <a href="#tl">Culture Context</a>
+        </li>
+        <li>
+          <a href="#vid">Club Close Up</a>
+			</li>
+      <li>
+          <a href="#num">The Numbers</a>
+			</li>
+      </ul>
+</nav>
+</div>
+    </div>        
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+
+    <div class="dance">
+  <h1 class="center__text glitch is-glitching" data-text="Dance">Dance</h1>
+</div>
+	
+<!--beginning of main content area-->
+    <div class="row whiteBG">
+<h2 id="home">Diversity at Cal Poly</h2>
+<article>
+<p class="tab">Cal Poly is  well known for not being a culturally diverse school. In fact, it is one of the least diverse universities within California based on race; a majority of the student population is white. With the current student body as it is, Cal Poly may seem like a barren campus in terms of culture. Yet, the situation is not that bleak.</p>
+
+<p class="tab"> Despite the majority of Cal Poly students being white, clubs like CSA (Chinese Student Association) and PCE (Pilipino Cultural Exchange) are two of the most prominent clubs on campus based on their size. Cultural organizations like these two play a major part in creating a community for students to express their culture at Cal Poly. One way this takes form is through events like PCW (Poly Cultural Weekend) and CultureFest</p>
+    
+<p class="tab"><a href="#gal">Center Stage</a></p>
+</article>
+</div>
+ 
+        
+<!--beginning of slideshow section-->
+<div class="row whiteBG"><!--beginning of row-->
+<h2 id="gal">Culture // Center Stage</h2>
+<article><!--beginning of article-->
+<p class="tab">Get to know how Cal Poly students showcase their culture at CultureFest</p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img/1.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | CultureFest is an annual event held by the Multicultural Center and the Dean of Students."/>
+<img src="img/2.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | One aspect of this event are the stalls run by the various cultural organizations at Cal Poly. Clubs, fraternities and sororities sell their food throughout the day."/>
+<img src="img/3.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | Each stall's product, whether it's TVSA's popular Thai tea boba or PCE's lumpia, brings a taste of culture to the table."/>
+<img src="img/4.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | But food is not the only way these organizations bring culture to Cal Poly. Here on the stage, groups perform in front of the audience and express their unique culture through dance."/>
+<img src="img/5.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | Ethan Franciliso, a third year computer engineering student, holds a freeze in front of the Slo Breakers during their performance. To him, “Breaking (a.k.a. breakdance) represents hip hop culture in the way battles pays homage to the origin of hip hop in the Bronx, where breaking was a way to settle feuds between gangs.”"/>
+<img src="img/6.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | The entire seven hour event has many more cultural organizations like Franciliso's SLO Breakers or Hui O Hawaii (on stage), go on stage to perform. Throughout the day, clubs and groups take to the stage every few minutes with only a few intermissions giving the performers a break."/>
+<img src="img/7.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | Despite the hectic performance schedule, particpants find the experience worth the effort."/>
+<img src="img/8.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | Anna Kanazawa (using drum), a third year architecture student, leads the Lion Dance Team in a review after their performance. She said “I decided to take leadership within this club because lion dancing is a wonderful opportunity for people of varying backgrounds to come together, train for a common goal, and perform to spread joy and happiness to others within our community, especially here in Slo where the Asian population is considered a minority and underrepresented.”"/>
+<img src="img/9.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | At the end of the day, Kanazawa's words came true in the form of a dance circle. There students came together and danced a variety of styles that ranged from the the macarena to line dance or to their own style."/>
+<img src="img/10.jpg" width="100%" height="100%" alt="October 12, 2019 | UU Plaza | David Yang, a third year mechanical engineer, is seen dancing with an ASI member after the dance crowd disperses at the end of Culturefest. Yang, a participant who danced his own style, said the reason he dances is because “I can express myself and put the way I feel into movement.”"/>
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a href="#tl">Culture Context</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+<!--end of slideshow section-->
+    
+	
+<!--beginning of audio section-->
+<div class="row whiteBG">
+<h2 id="tl">Culture Context</h2>
+<article>
+  <p class="tab">Click on images to hear student's thoughts on how they express culture through dance. <br>(Double-click to pause audio)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio_1">
+    <source src="audio/1.mp3" type="audio/mpeg" />
+</audio>
+            
+<audio id="audio_2">
+    <source src="audio/2.mp3" type="audio/mpeg" />
+</audio>
+            
+<audio id="audio_3">
+	<source src="audio/3.mp3" type="audio/mpeg" />
+</audio>
+            
+<img src="img/rollover/1.png" class="rollover" alt="description" onMouseOver="this.src='img/rollover/2.png'" onMouseOut="this.src='img/rollover/1.png'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;">
+ /&gt; 
+            
+<img src="img/rollover/3.png" class="rollover" alt="description" onMouseOver="this.src='img/rollover/4.png'" onMouseOut="this.src='img/rollover/3.png'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;">
+ /&gt;
+            
+<img src="img/rollover/5.png" class="rollover" alt="description" onMouseOver="this.src='img/rollover/6.png'" onMouseOut="this.src='img/rollover/5.png'" onClick="document.getElementById('audio_3').play(); return false;" onDblClick="document.getElementById('audio_3').pause(); return false;">
+/&gt;
+	</div>
+</div>
+<p class="tab"><a href="#vid">Close Up</a></p>		
+</article>
+</div>
+<!--end of audio section-->
+    
+    <!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/parallax.png">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row whiteBG">
+<h2 id="vid">Club Close Up</h2>
+<article>
+<p class="tab">Former Kasayahan coordinator Isaiah Abrea shares his perspective on sharing Filipino culture through dance.</p>	
+<video width="100%" height="100%" poster="img/kasayahan-still.jpg" controls>
+<source src="img/video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a href="#num">The Numbers</a></p>
+</article>
+</div>
+<!--end of video section-->
+
+<!--beginning of new section-->
+<div class="row whiteBG">
+<h2 id="num">The Numbers</h2>
+<article>
+<p class="tab"></p>
+<div class="infogram-embed" data-id="676b83ed-58ca-4ac0-8cb4-292a6b16249b" data-type="interactive" data-title="Culture Climate Change"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script>
+
+</article>
+</div>
+    
+<!--end of new section-->
+	
+<!--beginning of footer-->
+<footer>Dance Beyond Borders | San Luis Obispo, CA | <a href="mailto: aaronjcapinpin@gmail.com?Subject=Inquiry" target="_top">Send Email</a> | Copyright 2019 | Site by Aaron James Capinpin 
+</footer>
+<!--end of footer-->
+	
+</body>
+	
+<!--the following script controls the responsive navigation-->
+<script>
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+</html>
