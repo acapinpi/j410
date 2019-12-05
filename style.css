@@ -37,7 +37,10 @@
   100% {transform: scale(0)}
 }
 
-
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 /*----------------PARALLAX IMAGE-----------------*/
 .parallax {
